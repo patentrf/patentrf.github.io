@@ -47,9 +47,9 @@ var c, price, dutySum, finalSum, tradeMarkSelect;
 			//пошлина по п. 1.18 и п. 1.19.1
 
 			
-			duty_sum.innerHTML = a;
-			job_sum.innerHTML = b;
+			duty_sum.innerHTML = a.toFixed(2);
+			job_sum.innerHTML = b.toFixed(2);
 
-			Sum.innerHTML = a + b;
+			Sum.innerHTML = (a + b).toFixed(2);
 			//итого
 };
