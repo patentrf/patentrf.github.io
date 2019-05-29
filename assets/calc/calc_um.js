@@ -47,7 +47,7 @@ var c, price, dutySum, finalSum, tradeMarkSelect;
 			if (document.getElementById('tm').value == "5") {job_sum.innerHTML = poshlina19+ip3};
 			//пошлина по п. 1.18 и п. 1.19.1
 
-			Sum.innerHTML = (~job_sum.innerHTML) + (~duty_sum.innerHTML);
+			Sum.innerHTML = (~~job_sum.innerHTML) + (~~duty_sum.innerHTML);
 			//итого
 };
 		
