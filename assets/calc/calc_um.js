@@ -47,7 +47,7 @@ var c, price, dutySum, finalSum, tradeMarkSelect;
 			
 			duty_sum.innerHTML = a.toFixed(2);
 			job_sum.innerHTML = b.toFixed(2);
-
+			//две цифры после запятой
 			Sum.innerHTML = (a + b).toFixed(2);
 			//итого
 };
