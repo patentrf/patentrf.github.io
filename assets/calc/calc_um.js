@@ -36,14 +36,12 @@ var c, price, dutySum, finalSum, tradeMarkSelect;
 			if (document.getElementById('tm').value == "2") {a = inval2+inval1};
 			if (document.getElementById('tm').value == "3") {a = alone2+alone1};
 			if (document.getElementById('tm').value == "4") {a = sub2+sub1};
-			if (document.getElementById('tm').value == "5") {a = ip2+ip1};
 			//пошлина по п. 1.2 и п. 1.10
 
 			if (document.getElementById('tm').value == "1") {b = poshlina19+ip3};
 			if (document.getElementById('tm').value == "2") {b = poshlina19+inval3};
 			if (document.getElementById('tm').value == "3") {b = poshlina19+alone3};
 			if (document.getElementById('tm').value == "4") {b = poshlina19+sub3};
-			if (document.getElementById('tm').value == "5") {b = poshlina19+ip3};
 			//пошлина по п. 1.18 и п. 1.19.1
 
 			
