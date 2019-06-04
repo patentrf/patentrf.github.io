@@ -1,7 +1,7 @@
 		var a, b, c, job, dutySum, finalSum, tradeMarkSelect;
 			var a = 3000;
 			var b = 4500;
-			var job = 10000;
+			var job = 12000;
 		window.onload = function() {
 			dutySum = document.getElementById("duty_sum");
 			finalSum = document.getElementById("Sum");
