@@ -68,15 +68,63 @@
 
     
 
-    <div class="container pt-4 mt-2">
+    <div class="container pt-5 mt-2">
         <h2 class="mbr-section-title pb-3 align-center mbr-fonts-style display-2">Полезные модели</h2>
         
         <div class="media-container-row">
             <div class="media-block m-auto" style="width: 49%;">
-                <div class="mbr-figure">
-                    <img src="assets/images/mbr-1024x710.jpg" alt="" title="">
-                </div>
-            </div>
+  <div class="container calc">
+	  <center><label for="container calc"><b>Калькулятор пошлин по полезным моделям</b></label></center>
+    <div class="row"> 
+      <div class="col-md-6">
+        <div id="calc">
+          <div class="form-group">
+            <label for="tm">Выберите льготную категорию?</label>
+            <select id="tm" class="form-control" onchange=onCalculate()>
+            <option selected value="1">Льготной категории нет</option>
+            <option value="2">Автор - инвалид, пенсионер, обучающийся, научный работник, научно-педагогический работник (коллектив указанных лиц)</option>
+            <option value="3">Единственный автор</option>
+            <option value="4">Субъект малого предпринимательства, образовательная организация, имеющая государственную аккредитацию, научная организация</option>
+            </select>
+          </div>
+                    </div>
+      </div>
+
+      <div class="col-md-6">
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Наименование</th>
+              <th>Стоимость (руб.)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Пошлины при подаче заявки</td>
+              <td id="job_sum"></td>
+            </tr>
+            <tr>
+              <td>Пошлина на выдачу патента</td>
+              <td id="duty_sum"></td>
+            </tr>
+            <tr>
+              <td><b>Итого</b></td>
+              <td id="Sum"></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <section class="mbr-section article content9 cid-roEgqpOzYU" id="content9-r">
+    <div class="container">
+        <div class="inner-container">
+            <div class="section-text align-center mbr-fonts-style display-7">Заявки подаются в электронном виде, льгота по пошлине составит 30%</div>
+            <div class="section-text align-center mbr-fonts-style display-7"><b>Стоимость уже с учетом льгот</b></div>
+        </div>
+    </div>
+            </section>
+    </div>
+  </div>
+              </div>
             <div class="cards-block">
                 <div class="cards-container">
                     <div class="card px-3 align-left col-12">
@@ -114,7 +162,6 @@
         </div>
     </div>
 </section>
-
 <section once="" class="cid-rrF6eg8wsR" id="footer6-18">
 
     
