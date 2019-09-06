@@ -57,7 +57,7 @@ var b, c, d, imgSearch, dutySum, dutySumPriv, numClasses, finalSum, tradeMarkSel
 			if (document.getElementById('tm').value !== "2") {(document.getElementById("typeLabe2").style.display = "none") && (document.getElementById("type22").style.display = "none")};
 
 			job_sum.innerHTML = 11000;
-			job_sum2.innerHTML = 6000
+			job_sum2.innerHTML = 7000
 			//стоимость работ
 
 			search_sum.innerHTML = ~~b;
