@@ -1,7 +1,8 @@
 var b, c, d, imgSearch, dutySum, dutySumPriv, numClasses, finalSum, tradeMarkSelect, finalSum2;
 
 		window.onload = function() {
-			dutySum = document.getElementById("duty_sum");
+			firstStage = document.getElementById("first_stage");
+			secondStage = document.getElementById("second_stage");
 			dutySumPriv = document.getElementById("duty_sum_with_privileges");
 			numClasses = document.getElementById("num_classes");
 			finalSum = document.getElementById("finalSum");
@@ -25,9 +26,18 @@ var b, c, d, imgSearch, dutySum, dutySumPriv, numClasses, finalSum, tradeMarkSel
 		}
 
 			function onCalculate() {
-			if (numClasses.value < 5) {dutySum.innerHTML = (33000 + 2500 * (numClasses.value - 1))} else {dutySum.innerHTML = (33000 + 2500 * (numClasses.value - 1) + 2000 * (numClasses.value - 5))};
-			// считаем стоимость поиска по изобр. элементу
+
+			if (numClasses.value < 5) {firstStage.innerHTML = Math.round (0.7 * ( 15000 + 2500 * (numClasses.value - 1)))} else {firstStage.innerHTML = Math.round (0.7 * ((15000 + 2500 * (numClasses.value - 1) + 1000 * (numClasses.value - 5))))};
+			//пошлина на 1м этапе (2.1+2.4)
+
+			if (numClasses.value < 5) {secondStage.innerHTML = 18000 * 0.7} else {secondStage.innerHTML = Math.round (0.7 * (18000 + 1000 * (numClasses.value - 5)))};
+			//пошлина на 2м этапе (2.11+2.4)
+
+			dutySum = ~~firstStage.innerHTML + ~~secondStage.innerHTML
+
 			imgSearch = 15000 + (500 * (numClasses.value - 3));
+			// считаем стоимость поиска по изобр. элементу
+
 			if (((document.getElementById('tm').value == "2") && document.getElementById('search').value == "1")) {b = c};
 			if (numClasses.value < 3) {c = 15000} else {c = imgSearch};
 			//if (numClasses.value > 3) {search_sum.innerHTML = ~~imgSearch};
@@ -46,18 +56,16 @@ var b, c, d, imgSearch, dutySum, dutySumPriv, numClasses, finalSum, tradeMarkSel
 			if (document.getElementById('tm').value == "2") {(document.getElementById("typeLabel").style.display = "none") && (document.getElementById("type").style.display = "none")};
 			if (document.getElementById('tm').value !== "2") {(document.getElementById("typeLabe2").style.display = "none") && (document.getElementById("type22").style.display = "none")};
 
-			job_sum.innerHTML = 17000;
+			job_sum.innerHTML = 11000;
+			job_sum2.innerHTML = 6000
 			//стоимость работ
-
-			dutySumPriv.innerHTML = Math.round (0.7 * ~~dutySum.innerHTML);
-			//пошлина со льготами
 
 			search_sum.innerHTML = ~~b;
 			//стоимость поиска
 
-			finalSum.innerHTML = Math.round (~~dutySum.innerHTML) + Math.round (~~job_sum.innerHTML) + Math.round(~~b);
-			//итого
+			dutySumPriv.innerHTML = dutySum;
+			//стоимость поиска
 
-			finalSum2.innerHTML = Math.round (~~dutySumPriv.innerHTML + ~~job_sum.innerHTML + ~~b);
+			finalSum2.innerHTML = Math.round (~~dutySumPriv.innerHTML + ~~job_sum.innerHTML + ~~job_sum2.innerHTML + ~~b);
 			//итого со льготами
 		}
