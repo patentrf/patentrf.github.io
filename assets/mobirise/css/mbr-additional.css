@@ -2628,7 +2628,7 @@ body {
 .cid-rroci99Cvw {
   padding-top: 90px;
   padding-bottom: 0px;
-  background-image: url("../../../assets/images/mbr-3-1920x1280.jpg");
+  background-image: url("../../../assets/images/mbr-5-1920x1280.jpg");
 }
 .cid-rroci99Cvw .mbr-section-subtitle {
   color: #767676;
@@ -2683,6 +2683,9 @@ body {
     width: 100% !important;
     height: auto !important;
   }
+}
+.cid-rroci99Cvw H2 {
+  color: #ffffff;
 }
 .cid-qxyOwCSYXH .navbar {
   background: #ffffff;
