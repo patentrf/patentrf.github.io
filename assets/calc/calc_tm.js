@@ -27,7 +27,7 @@ var b, c, d, imgSearch, dutySum, dutySumPriv, numClasses, finalSum, tradeMarkSel
 
 			function onCalculate() {
 
-			if (numClasses.value < 5) {firstStage.innerHTML = Math.round (0.7 * ( 15000 + 2500 * (numClasses.value - 1)))} else {firstStage.innerHTML = Math.round (0.7 * ((15000 + 2500 * (numClasses.value - 1) + 1000 * (numClasses.value - 5))))};
+			if (numClasses.value < 5) {firstStage.innerHTML = Math.round (0.7 * ( 15000 + 3500 * (numClasses.value - 1)))} else {firstStage.innerHTML = Math.round (0.7 * ((17000 + 3500 * (numClasses.value - 1) + 1000 * (numClasses.value - 5))))};
 			//пошлина на 1м этапе (2.1+2.4)
 
 			if (numClasses.value < 5) {secondStage.innerHTML = 18000 * 0.7} else {secondStage.innerHTML = Math.round (0.7 * (18000 + 1000 * (numClasses.value - 5)))};
@@ -35,11 +35,11 @@ var b, c, d, imgSearch, dutySum, dutySumPriv, numClasses, finalSum, tradeMarkSel
 
 			dutySum = ~~firstStage.innerHTML + ~~secondStage.innerHTML
 
-			imgSearch = 15000 + (500 * (numClasses.value - 3));
+			imgSearch = 17000 + (500 * (numClasses.value - 3));
 			// считаем стоимость поиска по изобр. элементу
 
 			if (((document.getElementById('tm').value == "2") && document.getElementById('search').value == "1")) {b = c};
-			if (numClasses.value < 3) {c = 15000} else {c = imgSearch};
+			if (numClasses.value < 3) {c = 17000} else {c = imgSearch};
 			//if (numClasses.value > 3) {search_sum.innerHTML = ~~imgSearch};
 			//
 			if (document.getElementById('search').value == "2") {b = 0};
